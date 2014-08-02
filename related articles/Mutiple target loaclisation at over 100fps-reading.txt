@@ -1,0 +1,13 @@
+快速的 feature detect 需要提前知道 object geometry
+在 introduction里 作者把问题表述为： finding points  in different views of a scene 给人的感觉是 直接的特征点匹配  比如sift 匹配
+
+作者认为 SSD do not perform well  应该使用更复杂的匹配方案
+大致有两个方向：
+1 further processing on the extracted patches to compute a feature descriptor vector 我想就是提前不变的特征点的思想 找到一个 ’标准‘  然后跟这个标准比较。
+
+2使用分类器 这个分类器对target 的多个方面都训练过。思想就是从 同一个target的多个方面 分别去衡量。如果多个方面都和 目标一致就接收。
+
+但是这两种方法 计算量太大 对real-time or small devices 不合适
+后来的改进是 replace the expensive scale-space search for interest regions with the very efficient fixed-scale FAST-9 detector
+就是不获得 尺度不变特征点 而是获得多个尺度的特征点。shit 好猥琐的想法。不过 一点没有错
+看到这里 感觉这个文章是讲 match的 给一个点 找到不同角度下的 匹配点 ！

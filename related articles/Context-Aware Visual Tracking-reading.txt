@@ -1,0 +1,4 @@
+首先 描述一个dilemma ：tracking 既要 计算上有效 又要克服杂乱的背景和 遮挡。
+
+引出这篇文章的 目的：a novel solution to this dilemma by considering the context of the tracking scene.
+通过一些辅助的物体 。辅助物体的三个特性：1 persistent co-occurrence with the target 2consistent motion correlation to the target 3 easy to tracking .说起来是这样的。就好像人上的衣服一样，都出现 运动一致 容易跟踪。 这些辅助物体 看做 the context of the target

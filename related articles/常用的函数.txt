@@ -1,0 +1,3 @@
+dir() 函数里可以用*通配符 如 dir('_input\*.png')就返回_input\ 目录下所有的Png 图片  结果是一个 结构体
+
+包括 name date bytes isdir datenum 几个属性
